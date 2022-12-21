@@ -1,24 +1,10 @@
-Welcome to Lumache's documentation!
+DASH Knowledge Base!
 ===================================
-
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
-.. note::
-
-   This project is under active development.
-
-Contents
---------
+This documentation is written in the context of the TETRA project DASH (Privacy Prserving Data Sharing) - funded by the flemish agency for innovation and entrepreneurship (VLAIO) - on the topic of techniques and best-practices to share data or insight while preserving privacy.
 
 .. toctree::
-
-   usage
-   api
-   
-Lumache has its documentation hosted on Read the Docs.
+    :maxdepth: 2
+    :caption: Contents:
+    
+    intro 
+    federated learning
