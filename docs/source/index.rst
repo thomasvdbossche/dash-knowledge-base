@@ -4,7 +4,15 @@ This documentation is written in the context of the TETRA project DASH (Privacy 
 
 .. toctree::
     :maxdepth: 2
-    :caption: Contents:
+    :caption: Federated Learning
+    :hidden:
     
-    intro 
-    federated learning
+    topics/basic-concept
+    topics/frameworks
+   
+:doc:`topics/basic-concepts`
+    Learn about the basic concepts of Federated Learning.
+    
+:doc:`topics/frameworks`
+    A summary of the most used frameworks to conduct Federated Learning.
+
