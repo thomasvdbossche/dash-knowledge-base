@@ -11,5 +11,5 @@ Federated Learnng
     :maxdepth: 2
     :caption: Federated Learning
     
-    topics/basic-concept
+    topics/basic-concepts
     topics/frameworks
