@@ -15,8 +15,12 @@ A relatively new and continuously researched topic, federated learning has been 
 Owing to federated learning, the company takes advantage of data from millions of smartphones while keeping users’ private text messages safe. Quoting Google, “Federated Learning processes that history on-device to suggest improvements to the next iteration of Gboard’s query suggestion model.”
 
 Centralized vs decentralized vs federated machine learning
+<<<<<<< HEAD
 ---------------------------------------------
 
+=======
+-----------------------------------
+>>>>>>> d83edf7569b68f5a2af30175672fbb45bc2e0e56
 Centralized machine learning approach
 -------------------------
 Traditionally, the data for machine learning models is first collected from multiple sources into one centralized repository. This central location can be a data warehouse, a data lake, or even a new, combined version of both — lakehouse. You pick an algorithm like the decision tree (or a set of algorithms like the aforementioned neural networks) to train it on the collected data. Then you can run the resulting model right on the central server or distribute it across devices.
