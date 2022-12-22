@@ -14,7 +14,6 @@ Owing to federated learning, the company takes advantage of data from millions o
 
 Centralized vs decentralized vs federated machine learning
 -----------------------------------
-
 Centralized machine learning approach
 -------------------------
 Traditionally, the data for machine learning models is first collected from multiple sources into one centralized repository. This central location can be a data warehouse, a data lake, or even a new, combined version of both — lakehouse. You pick an algorithm like the decision tree (or a set of algorithms like the aforementioned neural networks) to train it on the collected data. Then you can run the resulting model right on the central server or distribute it across devices.
