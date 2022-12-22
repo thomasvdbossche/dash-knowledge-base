@@ -18,7 +18,7 @@ OpenFL
 Developed by Intel, OpenFL (Open Federated Learning) is an open-source framework that leverages the data-private federated learning paradigm for training ML algorithms. The framework comes with a command-line interface and a Python API. Open FL can work with training pipelines built with PyTorch and TensorFlow while it can go beyond and work with other frameworks.
 
 
-OpenFL
+IBM Federated Learning
 -----------------------------------
 IBM Federated Learning is a framework that promises data scientists and machine learning engineers an easy integration of federated learning workflows within the enterprise environment. This federated learning framework supports a variety of algorithms, topologies, and protocols out-of-the-box, including
 
