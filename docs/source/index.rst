@@ -4,7 +4,6 @@ This documentation is written in the context of the TETRA project DASH (Privacy 
 
 .. toctree::
     :caption: Federated Learning
-    :hidden:
     
     topics/basic-concept
     topics/frameworks
