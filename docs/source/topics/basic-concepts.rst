@@ -1,6 +1,8 @@
-=================
 Basic concepts
-=================
+======================================
+
+Introduction
+--------------
 
 Federated learning or FL (sometimes referred to as collaborative learning) is an emerging approach used to train a decentralized machine learning model (e.g., deep neural networks) across multiple edge devices, variously from smartphones to medical wearables to vehicles to IoT devices, etc. They collaboratively (hence the second name) train a shared model while keeping the training data locally without exchanging it with a central location.
 
@@ -13,7 +15,7 @@ A relatively new and continuously researched topic, federated learning has been 
 Owing to federated learning, the company takes advantage of data from millions of smartphones while keeping users’ private text messages safe. Quoting Google, “Federated Learning processes that history on-device to suggest improvements to the next iteration of Gboard’s query suggestion model.”
 
 Centralized vs decentralized vs federated machine learning
------------------------------------
+---------------------------------------------
 
 Centralized machine learning approach
 -------------------------
@@ -26,6 +28,7 @@ While it’s a relatively easy, standard approach, it has some disadvantages —
 - Connectivity issues. Again, you need a stable Internet connection to ensure smooth data exchange between myriads of devices from one side and the central server from the other.
 
 - Data privacy concerns. Some data such as images and text messages may be useful for making intelligent apps but it may contain private information and can’t be freely shared.
+
 
 Centralized machine learning approach
 -------------------------
