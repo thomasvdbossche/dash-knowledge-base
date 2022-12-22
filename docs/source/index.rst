@@ -13,3 +13,4 @@ Federated Learnng
     
     topics/basic-concepts
     topics/frameworks
+    topics/applications
