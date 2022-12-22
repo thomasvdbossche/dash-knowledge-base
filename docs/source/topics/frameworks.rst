@@ -29,3 +29,15 @@ IBM Federated Learning is a framework that promises data scientists and machine 
 - Models written in Keras, PyTorch, and TensorFlow, to name a few.
 
 Not to mention that researchers in the field of federated learning can use the existing functionality of the framework to fit the specific needs of their organization or the particular application domain.
+
+Flower
+-----------------------------------
+Flower (flwr) is a framework for building federated learning systems. The design of Flower is based on a few guiding principles:
+
+- Customizable: Federated learning systems vary wildly from one use case to another. Flower allows for a wide range of different configurations depending on the needs of each individual use case.
+
+- Extendable: Flower originated from a research project at the University of Oxford, so it was built with AI research in mind. Many components can be extended and overridden to build new state-of-the-art systems.
+
+- Framework-agnostic: Different machine learning frameworks have different strengths. Flower can be used with any machine learning framework, for example, PyTorch, TensorFlow, Hugging Face Transformers, PyTorch Lightning, MXNet, scikit-learn, JAX, TFLite, or even raw NumPy for users who enjoy computing gradients by hand.
+
+- Understandable: Flower is written with maintainability in mind. The community is encouraged to both read and contribute to the codebase.
