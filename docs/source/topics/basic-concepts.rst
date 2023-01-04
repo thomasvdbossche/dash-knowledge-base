@@ -18,7 +18,7 @@ Centralized vs decentralized vs federated machine learning
 ---------------------------------------------
 
 Centralized machine learning approach
--------------------------
+~~~~~~~
 Traditionally, the data for machine learning models is first collected from multiple sources into one centralized repository. This central location can be a data warehouse, a data lake, or even a new, combined version of both — lakehouse. You pick an algorithm like the decision tree (or a set of algorithms like the aforementioned neural networks) to train it on the collected data. Then you can run the resulting model right on the central server or distribute it across devices.
 
 While it’s a relatively easy, standard approach, it has some disadvantages — especially if applied to modern IoT infrastructures, with new data constantly generated at the periphery of computer networks. The main modern challenges related to centralized ML are as follows:
@@ -30,14 +30,15 @@ While it’s a relatively easy, standard approach, it has some disadvantages —
 - Data privacy concerns. Some data such as images and text messages may be useful for making intelligent apps but it may contain private information and can’t be freely shared.
 
 
-Centralized machine learning approach
--------------------------
+Decentralized on-site machine learning approach
+~~~~~~~
+
 One idea to solve some of the problems mentioned above is to do all machine learning on-site. This means that each individual device or local server trains the model on its own data and in its own environment, not communicating with the central location at all. As a result, ML stays independent of the quality of the Internet connection and can use confidential information as it doesn’t have to be sent to the cloud.
 
 The downside of the approach is that one device doesn’t obtain sufficient data to make accurate predictions and other sources do not contribute to the model training. So, the question is left open. Is there a chance for companies to create an efficient machine learning model while keeping all things on-device? In short, yes. Federated learning is here for those reasons.
 
 Federated machine learning approach
--------------------------
+~~~~~~~
 Federated learning also enables learning at the edge, meaning it brings model training to the data distributed on millions of devices. At the same time, it allows you to enhance results obtained at the periphery, in the central location.
 
 
