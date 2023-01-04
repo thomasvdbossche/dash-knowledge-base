@@ -31,7 +31,8 @@ While it’s a relatively easy, standard approach, it has some disadvantages —
 
 
 Centralized machine learning approach
--------------------------
+~~~~~~~
+
 One idea to solve some of the problems mentioned above is to do all machine learning on-site. This means that each individual device or local server trains the model on its own data and in its own environment, not communicating with the central location at all. As a result, ML stays independent of the quality of the Internet connection and can use confidential information as it doesn’t have to be sent to the cloud.
 
 The downside of the approach is that one device doesn’t obtain sufficient data to make accurate predictions and other sources do not contribute to the model training. So, the question is left open. Is there a chance for companies to create an efficient machine learning model while keeping all things on-device? In short, yes. Federated learning is here for those reasons.
