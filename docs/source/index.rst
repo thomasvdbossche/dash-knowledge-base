@@ -14,4 +14,5 @@ Federated Learning
     
     topics/basic-concepts
     topics/frameworks
+    topics/embedded-devices
     topics/applications
