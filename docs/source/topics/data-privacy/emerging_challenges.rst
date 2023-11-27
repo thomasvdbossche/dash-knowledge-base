@@ -1,5 +1,5 @@
 ========================
-Emergin Challenges
+Emerging Challenges
 ========================
 
 This section introduces the main topics covered in the document.
