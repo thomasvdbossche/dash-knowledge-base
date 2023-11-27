@@ -3,13 +3,17 @@
 # -- Project information
 
 project = 'DASH Tetra Project Knowledge Base'
-copyright = '2022'
+copyright = '2023'
 author = 'Thomas Van den Bossche'
 
-release = '0.1'
-version = '0.1.0'
+release = '1.1'
+version = '1.1.0'
 
 # -- General configuration
+
+import pathlib
+import sys
+sys.path.insert(0, pathlib.Path(__file__).parents[2].resolve().as_posix())
 
 extensions = [
     'sphinx.ext.duration',
@@ -33,3 +37,6 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+html_show_sphinx = False
+

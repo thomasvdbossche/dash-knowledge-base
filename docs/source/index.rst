@@ -1,19 +1,34 @@
 DASH Knowledge Base
 ===================================
 
-Context of this documentation
---------------------------------------
-This documentation is written in the context of the TETRA project DASH (Privacy Prserving Data Sharing) - funded by the flemish agency for innovation and entrepreneurship (VLAIO) - on the topic of techniques and best-practices to share data or insight while preserving privacy.
+.. toctree::
+    :maxdepth: 2
+    :caption: Contents
+
+    context
 
 Federated Learning
-==============
+==================
 .. toctree::
     :maxdepth: 2
     :caption: Federated Learning
     :hidden:
-    
-    topics/basic-concepts
-    topics/frameworks
-    topics/methodology
-    topics/embedded-devices
-    topics/applications
+
+    topics/fl/basic-concepts
+    topics/fl/frameworks
+    topics/fl/methodology
+    topics/fl/applications
+    topics/fl/sme-implementation-strategies
+    topics/fl/case-studies-for-smes
+    topics/fl/technical-challenges-and-solutions
+    topics/fl/privacy-and-security-considerations-for-smes
+    topics/fl/tools-and-resources-for-smes
+
+Data Privacy
+==================
+.. toctree::
+    :maxdepth: 2
+    :caption: Data Privacy
+    :hidden:
+
+    topics/data-privacy/intro

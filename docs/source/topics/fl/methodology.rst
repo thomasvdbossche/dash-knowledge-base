@@ -1,8 +1,8 @@
 Methodology
-======================================
+===========
 
 Steps
---------------
+-----
 
 Step 1: Pick your model framework
 Step 2: Determine the network mechanism
@@ -13,7 +13,7 @@ Step 6: Establish the model management system
 Step 7: Addressing privacy and security
 
 Step 1: Pick your model framework
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A framework must be selected that has some support for federated learning.
 
 Selection criteria includes items like:
@@ -24,7 +24,7 @@ Selection criteria includes items like:
 PyTorch or TensorFlow are popular choices; these libraries provide some facilities for federated learning but additional production ready components need to be added for a complete solution.
 
 Step 2: Determine the network mechanism
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Next, you need to determine what networking mechanism to use. This mechanism is the messaging format and framework for passing the instructions between each participant in the federated learning network.
 
 - PySyft with PyTorch: a PyTorch focused framework from OpenMined to enable federated learning
@@ -38,7 +38,7 @@ If you want to prioritize flexibility, then Flower is a good choice because it e
 Both the networking and core model framework choices are also dependent on the application being within an organization, or between multiple organizations. In the latter case, choices need to be acceptable across all participating organizations.
 
 Step 3: Build the centralized service
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Once you have picked your model framework and networking mechanism, you need to establish a centralized service to manage the participants. This service will be responsible for coordinating communication between the participants, as well as monitoring the training progress.
 
 From an operational perspective, this service will likely need to:
@@ -60,7 +60,7 @@ There are additional key design considerations from a functional perspective, to
 Taking the time to design a system that takes these considerations into account is critical to ensure that the system you will implement will be reliable, flexible and valuable.
 
 Step 4: Design the client system
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now it’s time to consider a possible design for the client system. This system needs to be able to perform client side training operations, and coordinate the model parameters with the central service. The client system will also need to fetch new parameters from other clients in the network to update the local model.
 
@@ -72,7 +72,7 @@ To design and deliver a reliable client application, you should seek to answer t
 - How will error recovery be handled during the model training process?
 
 Step 5: Set up the training process
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The federated learning system needs to know what private data should be used from each client to train the local models for a particular session.
 
@@ -82,7 +82,7 @@ This also requires that clients register this meta information about what datase
 
 
 Step 6: Establish the model management system
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The output of a training session is a machine learning model. The federated learning system needs to manage model metrics and access so that the appropriate users can use the trained model.
 
 The following questions can be used to guide how the system will manage models:
@@ -92,7 +92,7 @@ The following questions can be used to guide how the system will manage models:
 - Where will the model be stored (typically this will be by the centralized service)?
 
 Step 7: Addressing privacy and security
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The final model is available locally to one or more of the participants. Because this model was trained by sharing weights between different parties, inverting the model to retrieve insights about the underlying training data is possible.
 
