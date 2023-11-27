@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frameworks &mdash; DASH Tetra Project Knowledge Base 1.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Methodology" href="methodology.html" />
+    <link rel="prev" title="Basic Concepts" href="basic-concepts.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            DASH Tetra Project Knowledge Base
+          </a>
+              <div class="version">
+                1.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../context.html">Context of this documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Federated Learning</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="basic-concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Frameworks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tensorflow-federated">TensorFlow Federated</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#openfl">OpenFL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ibm-federated-learning">IBM Federated Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flower">Flower</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#easyfl-a-lightning-framework-for-federated-learning">easyFL: A Lightning Framework for Federated Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fate">FATE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#substra">Substra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pysyft-pygrid">PySyft + PyGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nvidia-clara">NVIDIA Clara</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enterprise-grade-federated-learning-platforms">Enterprise-grade Federated Learning Platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="methodology.html">Methodology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sme-implementation-strategies.html">SME Implementation Strategies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case-studies-for-smes.html">Case Studies for SMEs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technical-challenges-and-solutions.html">Technical Challenges and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="privacy-and-security-considerations-for-smes.html">Privacy and Security Considerations for SMEs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools-and-resources-for-smes.html">Tools and Resources for SMEs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data Privacy</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data-privacy/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data-privacy/differential_privacy.html">Differential Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data-privacy/dataset_anonymization.html">Dataset Anonymization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data-privacy/emerging_challenges.html">Emergin Challenges</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DASH Tetra Project Knowledge Base</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Frameworks</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/topics/fl/frameworks.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="frameworks">
+<h1>Frameworks<a class="headerlink" href="#frameworks" title="Permalink to this heading"></a></h1>
+<section id="tensorflow-federated">
+<h2>TensorFlow Federated<a class="headerlink" href="#tensorflow-federated" title="Permalink to this heading"></a></h2>
+<p>Developed by Google, TensorFlow Federated (TFF) is a Python-based, open-source framework for training machine learning models on decentralized data. This framework has been pioneering the experimentation with federated learning as an approach.</p>
+<p>TFF performs in two main API layers:</p>
+<ul class="simple">
+<li><p>Federated Learning (FL) API offers high-level interfaces that enable developers to plug existing machine learning models to TFF without the need to dive deeply into how federated learning works.</p></li>
+<li><p>Federated Core (FC) API offers low-level interfaces that provide opportunities to build novel federated algorithms.</p></li>
+</ul>
+<p>The library consists of two components: the collaborator, which uses a local dataset to train global models and the aggregator, which receives the model updates and combines them to create the global model. OpenFL comes with a Python API and a command-line interface.</p>
+<p>The communication between the nodes is done using mTLS, and hence certificates are required. It is necessary to certify each node in the federation. OpenFL supports lossy and lossless compression of data to reduce communication costs. OpenFL allows developers to customize logging, data split methods, and aggregation logic.</p>
+<p>The OpenFL design philosophy is based on the Federated Learning (FL) Plan. It is a YAML file that defines required collaborators, aggregators, connections, models, data, and any required configuration. OpenFL runs on docker containers to isolate federation environments.</p>
+</section>
+<section id="openfl">
+<h2>OpenFL<a class="headerlink" href="#openfl" title="Permalink to this heading"></a></h2>
+<p>Developed by Intel, OpenFL (Open Federated Learning) is an open-source framework that leverages the data-private federated learning paradigm for training ML algorithms. The framework comes with a command-line interface and a Python API. Open FL can work with training pipelines built with PyTorch and TensorFlow while it can go beyond and work with other frameworks.</p>
+</section>
+<section id="ibm-federated-learning">
+<h2>IBM Federated Learning<a class="headerlink" href="#ibm-federated-learning" title="Permalink to this heading"></a></h2>
+<p>IBM Federated Learning is a framework that promises data scientists and machine learning engineers an easy integration of federated learning workflows within the enterprise environment. This federated learning framework supports a variety of algorithms, topologies, and protocols out-of-the-box, including</p>
+<ul class="simple">
+<li><p>Linear classifiers/regressions,</p></li>
+<li><p>Deep Reinforcement Learning algorithms,</p></li>
+<li><p>Naïve Bayes,</p></li>
+<li><p>Decision Tree, and</p></li>
+<li><p>Models written in Keras, PyTorch, and TensorFlow, to name a few.</p></li>
+</ul>
+<p>Not to mention that researchers in the field of federated learning can use the existing functionality of the framework to fit the specific needs of their organization or the particular application domain.</p>
+</section>
+<section id="flower">
+<h2>Flower<a class="headerlink" href="#flower" title="Permalink to this heading"></a></h2>
+<p>Flower (flwr) is a framework for building federated learning systems. The design of Flower is based on a few guiding principles:</p>
+<ul class="simple">
+<li><p>Customizable: Federated learning systems vary wildly from one use case to another. Flower allows for a wide range of different configurations depending on the needs of each individual use case.</p></li>
+<li><p>Extendable: Flower originated from a research project at the University of Oxford, so it was built with AI research in mind. Many components can be extended and overridden to build new state-of-the-art systems.</p></li>
+<li><p>Framework-agnostic: Different machine learning frameworks have different strengths. Flower can be used with any machine learning framework, for example, PyTorch, TensorFlow, Hugging Face Transformers, PyTorch Lightning, MXNet, scikit-learn, JAX, TFLite, or even raw NumPy for users who enjoy computing gradients by hand.</p></li>
+<li><p>Understandable: Flower is written with maintainability in mind. The community is encouraged to both read and contribute to the codebase.</p></li>
+</ul>
+</section>
+<section id="easyfl-a-lightning-framework-for-federated-learning">
+<h2>easyFL: A Lightning Framework for Federated Learning<a class="headerlink" href="#easyfl-a-lightning-framework-for-federated-learning" title="Permalink to this heading"></a></h2>
+<p>EasyFL is a strong and reusable experimental platform for research on federated learning (FL) algorithm, which has provided a few easy-to-use modules to hold out for those who want to do various federated learning experiments. In short, it is easy for FL-researchers to</p>
+<ul class="simple">
+<li><p>quickly realize and compare popular centralized federated learning algorithms</p></li>
+</ul>
+<p>transform traditional machine learning tasks into federated tasks by following our paradigm of constructing data pipeline</p>
+<p>make interesting observations during training time to get a deeper insight of federated learning in a code-incremental manner without destorying the original realization
+- efficiently manage and analyze the experiment records with utils/result_analysis.py</p>
+</section>
+<section id="fate">
+<h2>FATE<a class="headerlink" href="#fate" title="Permalink to this heading"></a></h2>
+<p>FATE (Federated AI Technology Enabler) is an open-source project that aims to support a secure and federated AI ecosystem. FATE is available for standalone and cluster deployment setups. The open-source framework is backed by WeBank, a private-owned neo bank based in Shenzhen, China.</p>
+<p>For using and writing custom models for it, you need to have some knowledge of protocol buffers. Besides that it has several components, such as:</p>
+<ul class="simple">
+<li><p>FATEFlow</p></li>
+</ul>
+<p>FATEFlow is the main component of FATE, and it represents the end-to-end machine learning orchestration pipeline. The pipeline supports machine learning tasks such as data preprocessing, model training and testing, publishing, and serving. FATEFlow supports DAG, scheduling, monitoring, and custom pipeline components.</p>
+<ul class="simple">
+<li><p>FederatedML</p></li>
+</ul>
+<p>FederatedML is the component responsible for implementing many standard machine learning algorithms and other utility tools. Supported algorithms include but are not limited to DataIO, Intersect, and OneHot Encoder.</p>
+<ul class="simple">
+<li><p>FATEBoard</p></li>
+</ul>
+<p>FATEBoard is a collection of visualization/dashboarding tools for federated learning to explore, analyze, and understand models easily. FATEBoard supports both standalone and distributed deployment setups.</p>
+<ul class="simple">
+<li><p>FATE Serving</p></li>
+</ul>
+<p>FATE Serving is the component responsible for serving federated learning models for production usage. It supports online inferencing, dynamic loading of models, A/B testing scenarios, and caching.</p>
+<ul class="simple">
+<li><p>Federated Network</p></li>
+</ul>
+<p>Federated Network is the communication means between federated learning parties</p>
+<ul class="simple">
+<li><p>KubeFATE</p></li>
+</ul>
+<p>KubeFATE is the distributed systems infrastructure required to manage federated workloads. KubeFATE supports docker-compose and Kubernetes cluster deployment setups.</p>
+<ul class="simple">
+<li><p>FATE-Client</p></li>
+</ul>
+<p>FATE-Client is an optional component used to interact with different FATE components.</p>
+</section>
+<section id="substra">
+<h2>Substra<a class="headerlink" href="#substra" title="Permalink to this heading"></a></h2>
+<p>Substra is a federated learning software framework developed by a multi-partner research project around Owkin, a French startup founded in 2016. Substra is focused on the medical field with the purpose of data ownership and privacy. Today, it is used in the MELLODY project for drug discovery in the pharmaceutical industry.</p>
+<p>Substra supports a wide variety of interfaces for different types of users. It has a python library for data scientists, command-line interfaces for admins, and graphical user interfaces for project managers and other high-level users. In terms of deployment, Substra involves a complex Kubernetes setup for every node.</p>
+<p>The key features of Substra are:
+- Privacy: Substra uses trusted execution environments (also called enclaves) that enables setting aside private regions for code and data
+- Traceability: Substra writes all operations on the platform to an immutable ledger
+- Security: Substra encrypts model updates, data on rest, and network communication</p>
+</section>
+<section id="pysyft-pygrid">
+<h2>PySyft + PyGrid<a class="headerlink" href="#pysyft-pygrid" title="Permalink to this heading"></a></h2>
+<p>PySyft is an open-source Python 3 based library that enables federated learning for research purposes and uses FL, differential privacy, and encrypted computations. It was developed by the OpenMined community and works mainly with deep learning frameworks such as PyTorch and TensorFlow.</p>
+<p>PySyft supports two types of computations:
+- Dynamic computations over data that cannot be seen
+- Static computations, which are graphs of computations that can be executed later on in a different computing environment</p>
+<p>PySyft defines objects, machine learning algorithms, and abstractions. With PySyft, you can’t work on real data science problems that involve communication across networks. This would require another library, called PyGrid.</p>
+<p>PyGrid implements federated learning on web, mobile, edge devices, and different types of terminals. PyGrid is the API to manage and deploy PySyft at scale. It can be controlled using PyGrid Admin.</p>
+<p>PyGrid consists of three different components:
+- Domain: A Flask based application used to store private data and models for federated learning
+- Worker: An ephemeral compute instance managed by domain components to perform computations on data
+- Network: A Flask based application to monitor and control different domain components</p>
+</section>
+<section id="nvidia-clara">
+<h2>NVIDIA Clara<a class="headerlink" href="#nvidia-clara" title="Permalink to this heading"></a></h2>
+<p>NVIDIA CLARA is an application framework designed for healthcare use cases. It includes full-stack GPU-accelerated libraries, SDKs, and reference applications for developers, data scientists, and researchers to create real-time, secure, and scalable federated learning solutions. Active deployment of CLARA can be found at the French startup Therapixel, which is using NVIDIA’s technology to improve the accuracy of breast cancer diagnosis.</p>
+<p>NVIDIA CLARA supports the following use cases:
+- Clara AGX for medical devices
+- Clara Discovery for Drug Discovery
+- Clara Guardian for Hospitals
+- Clara Imaging for Medical Images
+- Clara Parabricks for Genomics</p>
+</section>
+<section id="enterprise-grade-federated-learning-platforms">
+<h2>Enterprise-grade Federated Learning Platforms<a class="headerlink" href="#enterprise-grade-federated-learning-platforms" title="Permalink to this heading"></a></h2>
+<p>Federated learning is a powerful technique to train machine learning data while maintaining privacy, and without ever having to share data. Many industries benefit from this approach, such as the healthcare sector, where patient data are considered highly confidential, or in manufacturing, where strong IP protection is needed.</p>
+<p>When looking at examples and tutorials of open-source software for federated learning, one is tempted to think to get good results quickly. This is mostly because the data sets provided are clean, you can easily split the data across clients, and get started with simple FL experiments. However, in the real world you face other complexities.</p>
+<p>If you are working in an industry that has the highest requirements in compliance, security, and availability, you might need to work with an enterprise-grade platform for federated &amp; privacy-preserving data science, such as Apheris.</p>
+<p>We take care of the full end-to-end process, starting from contractual, legal, and compliance frameworks, role-based authentication, privacy controls, traceability via a logging solution, and supporting the full data science workflow. Apheris provides the fastest and most secure way to progress from experimentation to high-impact collaborations with partners that drive tangible business results from AI.</p>
+<p>To securely collaborate with partners on AI and sensitive data in an enterprise context, Federated Learning must be seen from a broader perspective. We go more into depth on what it takes to implement federated learning into enterprise MLOps pipelines in our whitepaper.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="basic-concepts.html" class="btn btn-neutral float-left" title="Basic Concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="methodology.html" class="btn btn-neutral float-right" title="Methodology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
