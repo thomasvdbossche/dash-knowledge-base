@@ -36,17 +36,17 @@ Privacy models
 --------------
 When sharing data, strong privacy guarantees (i.e. a minimal privacy level for each individual in the dataset) are desirable. To achieve these strong guarantees, generalization and suppression are combined to apply privacy models to a dataset. The most well-known and often-used privacy model is k-anonymity. 
 
-K- anonymity.
+K- anonymity
 ~~~~~~~~~~~~~
 The k-anonymity privacy model states that -- when considering the quasi-identifying attributes -- every individual in the dataset should be indistinguishable from at least k – 1 other individuals. K-anonymity is achieved by finding a balance between generalizing attributes (up to a certain level) to form groups of (at least) k records and suppressing the records which do meet the required group size. A group of at least k records is called an equivalence class. 
 
 While k-anonymity provides protection against direct record linkage between a record and an individual, certain risks remain. For instance, every record in an equivalence class could have the same value for a sensitive attribute. While an attacker cannot map the individual to one specific record in that equivalence class, he is able to deduce the value of the sensitive attribute as they are all equal. Other privacy models – such as l-diversity -- aim to solve this kind of problems. 
 
-L-diversity.
+L-diversity
 ~~~~~~~~~~~~~
 This privacy model is used in combination with k-anonymity. It adds the additional constraint that each equivalence class should at least show l different values for each sensitive attribute. This way, an attacker cannot make the aforementioned sensitive attribute deduction anymore. The l-diversity privacy model is also achieved by generalizing records. In many cases, harsher generalizations are required to fulfill the requirement of having l sensitive attribute values in each equivalence class. 
 
-Other models.
+Other models
 ~~~~~~~~~~~~~
 Many more privacy models exist. Examples are t-closeness, β-Likeness and δ-Presence. Each of these models boasts different constraints to which the resulting datasets should adhere. Note that harsher constraints, while providing increased and stronger privacy guaranties, could have a detrimental impact on the utility of the resulting anonymized dataset.
 

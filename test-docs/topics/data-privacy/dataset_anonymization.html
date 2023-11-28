@@ -71,9 +71,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#types-of-attributes">Types of attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#anonymization-tactics-generalization-and-suppression">Anonymization tactics: Generalization and suppression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#privacy-models">Privacy models</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#k-anonymity">K- anonymity.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#l-diversity">L-diversity.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#other-models">Other models.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#k-anonymity">K- anonymity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#l-diversity">L-diversity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-models">Other models</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#arx-a-tool-for-data-anonymization">ARX – a tool for data anonymization</a></li>
@@ -142,16 +142,16 @@
 <h2>Privacy models<a class="headerlink" href="#privacy-models" title="Permalink to this heading"></a></h2>
 <p>When sharing data, strong privacy guarantees (i.e. a minimal privacy level for each individual in the dataset) are desirable. To achieve these strong guarantees, generalization and suppression are combined to apply privacy models to a dataset. The most well-known and often-used privacy model is k-anonymity.</p>
 <section id="k-anonymity">
-<h3>K- anonymity.<a class="headerlink" href="#k-anonymity" title="Permalink to this heading"></a></h3>
+<h3>K- anonymity<a class="headerlink" href="#k-anonymity" title="Permalink to this heading"></a></h3>
 <p>The k-anonymity privacy model states that – when considering the quasi-identifying attributes – every individual in the dataset should be indistinguishable from at least k – 1 other individuals. K-anonymity is achieved by finding a balance between generalizing attributes (up to a certain level) to form groups of (at least) k records and suppressing the records which do meet the required group size. A group of at least k records is called an equivalence class.</p>
 <p>While k-anonymity provides protection against direct record linkage between a record and an individual, certain risks remain. For instance, every record in an equivalence class could have the same value for a sensitive attribute. While an attacker cannot map the individual to one specific record in that equivalence class, he is able to deduce the value of the sensitive attribute as they are all equal. Other privacy models – such as l-diversity – aim to solve this kind of problems.</p>
 </section>
 <section id="l-diversity">
-<h3>L-diversity.<a class="headerlink" href="#l-diversity" title="Permalink to this heading"></a></h3>
+<h3>L-diversity<a class="headerlink" href="#l-diversity" title="Permalink to this heading"></a></h3>
 <p>This privacy model is used in combination with k-anonymity. It adds the additional constraint that each equivalence class should at least show l different values for each sensitive attribute. This way, an attacker cannot make the aforementioned sensitive attribute deduction anymore. The l-diversity privacy model is also achieved by generalizing records. In many cases, harsher generalizations are required to fulfill the requirement of having l sensitive attribute values in each equivalence class.</p>
 </section>
 <section id="other-models">
-<h3>Other models.<a class="headerlink" href="#other-models" title="Permalink to this heading"></a></h3>
+<h3>Other models<a class="headerlink" href="#other-models" title="Permalink to this heading"></a></h3>
 <p>Many more privacy models exist. Examples are t-closeness, β-Likeness and δ-Presence. Each of these models boasts different constraints to which the resulting datasets should adhere. Note that harsher constraints, while providing increased and stronger privacy guaranties, could have a detrimental impact on the utility of the resulting anonymized dataset.</p>
 </section>
 </section>
