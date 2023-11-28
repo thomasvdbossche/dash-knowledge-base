@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Differential Privacy &mdash; DASH Tetra Project Knowledge Base 1.1 documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=91e4a3f0"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -65,17 +67,17 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Differential Privacy</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#chapter">Chapter</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#section-details">Section Details</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumerated-list">Enumerated List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#itemized-list">Itemized List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-concepts">Basic Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-does-differential-privacy-work">How does differential privacy work?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parametrization-of-the-noise">Parametrization of the noise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#privacy-budget">Privacy budget</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-simple-example">A simple example…</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dataset_anonymization.html">Dataset Anonymization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="emerging_challenges.html">Emergin Challenges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emerging_challenges.html">Emerging Challenges</a></li>
 </ul>
 
         </div>
@@ -104,38 +106,30 @@
              
   <section id="differential-privacy">
 <h1>Differential Privacy<a class="headerlink" href="#differential-privacy" title="Permalink to this heading"></a></h1>
-<p>This section introduces the main topics covered in the document.</p>
-<section id="chapter">
-<h2>Chapter<a class="headerlink" href="#chapter" title="Permalink to this heading"></a></h2>
-<section id="section-details">
-<h3>Section Details<a class="headerlink" href="#section-details" title="Permalink to this heading"></a></h3>
-<ul class="simple">
-<li><p>Description of the first major point.</p></li>
-<li><p>Explanation of the second major point.</p></li>
-<li><p>Discussion on the third major point.</p></li>
-</ul>
+<p>Differential privacy is an approach used to protect privacy of individuals when performing functions on a dataset. It provides strong guarantees that sensitive information (specific sensitive attributes or membership) about any individual in the dataset remains secret. It is important to note that differential privacy is always applied to a query (or function/analysis/calculation) and not to a dataset. The result of such query should be a value (e.g. the average age of every individual in the dataset), and never a set of records (e.g. a set of individuals with their respective age). The concept of differential privacy was first introduced in 2006 by Cynthia Dwork et. al. in a paper titled “Calibrating Noise to Sensitivity in Private Data Analysis”.</p>
+<section id="basic-concepts">
+<h2>Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this heading"></a></h2>
+<section id="how-does-differential-privacy-work">
+<h3>How does differential privacy work?<a class="headerlink" href="#how-does-differential-privacy-work" title="Permalink to this heading"></a></h3>
+<p>Differential privacy is achieved by adding a certain amount of noise to the result of a query. The amount of noise should be calculated in such a way that it is sufficient to mask the contribution of any single individual to the result of the query/function. However, note that adding too much noise is undesirable as it is detrimental for accuracy. Laplace noise is commonly used for this purpose.</p>
 </section>
-<section id="enumerated-list">
-<h3>Enumerated List<a class="headerlink" href="#enumerated-list" title="Permalink to this heading"></a></h3>
-<ol class="arabic simple">
-<li><p>First item in an ordered list.</p></li>
-<li><p>Second item.</p></li>
-<li><p>Third item.</p></li>
-</ol>
+<section id="parametrization-of-the-noise">
+<h3>Parametrization of the noise<a class="headerlink" href="#parametrization-of-the-noise" title="Permalink to this heading"></a></h3>
+<p>Depending on the sensitivity of the query, a privacy parameter called “epsilon” (ε) is defined. This parameter defines how much the query result may change when an individual is added to – or removed from – the dataset. The smaller ε, the more noise is added, and the stronger the privacy guarantees.</p>
 </section>
-<section id="itemized-list">
-<h3>Itemized List<a class="headerlink" href="#itemized-list" title="Permalink to this heading"></a></h3>
-<ul class="simple">
-<li><p>First item in a bullet list.
-- Nested item under the first item.</p></li>
-<li><p>Second item.</p></li>
-<li><p>Third item.</p></li>
-</ul>
+<section id="privacy-budget">
+<h3>Privacy budget<a class="headerlink" href="#privacy-budget" title="Permalink to this heading"></a></h3>
+<p>The privacy budget defines the maximal amount of information that can be disclosed. It becomes relevant when not one, but a sequence of queries/functions is executed on the dataset. In this case, the predefined privacy parameter ε represents the total privacy budget, which needs to be divided over the multiple queries. As each of the requests is only allowed a fraction of the total value of ε, the results of the queries will become nosier with an increasing amount of queries.</p>
 </section>
 </section>
-<section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading"></a></h2>
-<p>This section summarizes the key points discussed in the document.</p>
+<section id="a-simple-example">
+<h2>A simple example…<a class="headerlink" href="#a-simple-example" title="Permalink to this heading"></a></h2>
+<p>Imagine a farm with hundreds of rabbits. Each day, the farmer feeds the rabbits as many carrots as they desire. In order to service the animals in the best way possible, the farmer frequently asks all rabbits to tell him how many carrots they ate that day. In order to keep track of their food intake, the rabbits created a database in which each rabbit has a record containing the amount of carrots it required that specific day. The rabbits are, however, skeptical to share this information as they fear that the ones requiring the most carrots will be removed from the pen and eaten by the farmer.</p>
+<p>Whenever the farmer requests the carrot data, the rabbits calculate the sum of all carrots. To protect themselves, they apply differential privacy and add noise to their result before sharing it with the farmer. While the results are accurate enough to ensure that all rabbits are fed adequately, the noise protects the sensitive data in the following ways:</p>
+<p><strong>Some rabbits told the farmer how much they eat.</strong> Even if the farmer knows the amount of carrots that every other rabbit ate, he can still not deduce the amount of carrots eaten by the one unknown rabbit as a result of the noise that was added to the result.</p>
+<p><strong>The farmer adds a new rabbit to the pen.</strong> Similar to the previous case, because noise was added to current and previous results, the farmer cannot accurately deduce how many carrots the new rabbit eats.</p>
+<p><strong>Sometimes, a rabbit-friend from another farm comes by to play in secret.</strong> Even this rabbit-friend can enter its data to the database. Because differential privacy is applied, the farmer has no way to deduce whether the data of the extra rabbit friend was part of the query result.</p>
+<p><em>(inspired by Google: https://github.com/google/differential-privacy/blob/main/examples/cc/README.md)</em></p>
 </section>
 </section>
 

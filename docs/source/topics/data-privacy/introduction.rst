@@ -2,34 +2,10 @@
 Introduction
 ========================
 
-This section introduces the main topics covered in the document.
+The amount of information that is collected and processed increased during the last decade.  Massive storage capabilities allow organizations to store fine-grained information about assets.  Meaningful sensor data streams and detailed consumer profiles are transferred and stored on huge disks, either installed on on-premises infrastructure or in data centers run by third parties.  Similarly, companies are relying on an increasing amount of computer power.  Optimization, machine learning, and AI algorithms need substantial computing power, and support intelligent strategic and operational decision making.  Those algorithms take a massive amount of sensitive data as input.  
+Companies thereby not only rely on data that is generated and stored internally.  To further optimize the decision-making process, organizations increasingly rely on external data that is often purchased at a high cost.  Exchange of datasets can be beneficial for both the data owners and the data processors.  The former typically retrieve fees from companies to which data is released.  The latter can take more optimal strategic decisions, and hence, increase their competitiveness.
+ 
+However, uncontrolled release of sensitive data is undesirable for many reasons.  First, releasing fine-grained sensitive data can undermine the competitiveness of companies, potentially leading indirectly to loss of consumers or reputation damage.  Second, privacy regulations stipulate constraints on the release and processing of sensitive personal data.  Hence, controlled release of data is a necessity in many scenarios.  
+Multiple tactics exist to control data flows.  Note that they are often combined in a concrete setting.  Let us take the prototypical setting existing of three types of stakeholders: (a) consumers interacting with service providers thereby potentially releasing sensitive information, (b) data owners hosting a service and collecting fine-grained consumer data, and (c) data processors that are interested in the data collected by the data owners. A first tactic is to constrain the amount of data that consumers release to service providers thereby applying the data minimization principle.  A second tactic consists of controlling data release between data owners (i.e. the aforementioned service providers) and data processors.  This can be achieved by controlled query handling (i.e., pull-based) or controlled data set transfer (i.e., push-based).  The former restricts the queries that can be submitted by data processors to data owners, and/or adds noise to the query results to protect the user’s privacy.  The latter transforms data sets before they are released to data processors.
 
-Chapter
-=======
-
-Section Details
----------------
-
-- Description of the first major point.
-- Explanation of the second major point.
-- Discussion on the third major point.
-
-Enumerated List
----------------
-
-1. First item in an ordered list.
-2. Second item.
-3. Third item.
-
-Itemized List
--------------
-
-- First item in a bullet list.
-  - Nested item under the first item.
-- Second item.
-- Third item.
-
-Conclusion
-==========
-
-This section summarizes the key points discussed in the document.
+Transforming datasets is done to protect the privacy of individuals (or other sensitive assets) in a data set.  Either pseudonymization or anonymization is applied.  Pseudonymization means that true identifiers (like name and surname) in a data set are replaced by pseudonyms before the data set is released.  The pseudonym can be a randomly generated token, or an encryption or hash of the true identifiers.  Note that mapping the pseudonyms back to the real identities is still possible by entities that keep the table that maps identifiers to pseudonyms.  Also, combining quasi-identifiers (like birth date and home location) often allows entities obtaining a pseudonymized data set to track back pseudonymized records to real individuals.  On the contrary, data set anonymization performs more advanced transformations on sensitive data sets (including stripping or generalizing attributes up to a certain level), thereby offering increased protection against re-identification attacks.  

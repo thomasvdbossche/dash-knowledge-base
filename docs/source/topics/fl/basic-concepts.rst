@@ -2,7 +2,7 @@ Basic Concepts
 ======================================
 
 Introduction
---------------
+------------
 
 Federated learning or FL (sometimes referred to as collaborative learning) is an emerging approach used to train a decentralized machine learning model (e.g., deep neural networks) across multiple edge devices, variously from smartphones to medical wearables to vehicles to IoT devices, etc. They collaboratively (hence the second name) train a shared model while keeping the training data locally without exchanging it with a central location.
 
