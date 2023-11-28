@@ -36,7 +36,7 @@ Privacy models
 --------------
 When sharing data, strong privacy guarantees (i.e. a minimal privacy level for each individual in the dataset) are desirable. To achieve these strong guarantees, generalization and suppression are combined to apply privacy models to a dataset. The most well-known and often-used privacy model is k-anonymity. 
 
-K- anonymity
+K-anonymity
 ~~~~~~~~~~~~~
 The k-anonymity privacy model states that -- when considering the quasi-identifying attributes -- every individual in the dataset should be indistinguishable from at least k – 1 other individuals. K-anonymity is achieved by finding a balance between generalizing attributes (up to a certain level) to form groups of (at least) k records and suppressing the records which do meet the required group size. A group of at least k records is called an equivalence class. 
 
